@@ -1,5 +1,5 @@
 <template lang="jade">
-  #mask
+  #mask(v-link="'/breaker'")
     .item
   #bg
 </template>

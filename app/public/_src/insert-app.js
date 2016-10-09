@@ -8,13 +8,14 @@ import VueResource from 'vue-resource'
 import VueTouch from 'vue-touch'
 
 // IMPORT COMPONENTS
-import Shell from '../_vue/Shell.vue'
-import Collapsing from '../_vue/Collapsing.vue'
-import Strobe from '../_vue/Strobe.vue'
-import Bounce from '../_vue/Bounce.vue'
+import Shell from './_vue/Shell.vue'
+import Collapsing from './_vue/Collapsing.vue'
+import Strobe from './_vue/Strobe.vue'
+import Bounce from './_vue/Bounce.vue'
+import Breaker from './_vue/Breaker.vue'
 
 // GLOBAL COMPONENTS
-import bbcn from '../_vue/_components/bbcn.vue'
+import bbcn from './_vue/_components/bbcn.vue'
 
 Vue.component('bbcn-component', bbcn)
 
@@ -47,6 +48,9 @@ router.map({
       },
       '/bounce': {
         component: Bounce
+      },
+      '/breaker': {
+        component: Breaker
       }
     }
   }

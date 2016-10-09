@@ -11,7 +11,7 @@ import utility from './_app/utilities.js'
 import browser from './_app/browser-detect.js'
 
 // RUN FUNCTIONS
-import insertApp from './_app/insert-app.js'
+import insertApp from './insert-app.js'
 
 // FIRST INIT
 const initApp = () => {
