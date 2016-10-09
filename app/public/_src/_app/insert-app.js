@@ -11,6 +11,7 @@ import VueTouch from 'vue-touch'
 import Shell from '../_vue/Shell.vue'
 import Collapsing from '../_vue/Collapsing.vue'
 import Strobe from '../_vue/Strobe.vue'
+import Bounce from '../_vue/Bounce.vue'
 
 // GLOBAL COMPONENTS
 import bbcn from '../_vue/_components/bbcn.vue'
@@ -43,6 +44,9 @@ router.map({
       },
       '/strobe': {
         component: Strobe
+      },
+      '/bounce': {
+        component: Bounce
       }
     }
   }

@@ -1,5 +1,5 @@
 <template lang="jade">
-  #strobe
+  #strobe(v-link="'/bounce'")
     h1
 </template>
 
@@ -27,6 +27,7 @@
     width: 100vw
     overflow: hidden
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQYV2NkYGD4z4AJGNGFQAJDQSEWv2C6G8N3UF0YHhxAhQBLjgoGdiBmhAAAAABJRU5ErkJggg==') repeat
+    cursor: pointer
 
   @keyframes rotate
     0%

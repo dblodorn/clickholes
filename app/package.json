@@ -9,6 +9,7 @@
     "ftp": "gulp ftp"
   },
   "dependencies": {
+    "animejs": "^1.1.1",
     "async-series": "0.0.1",
     "bowser": "^1.4.5",
     "hammerjs": "^2.0.8",

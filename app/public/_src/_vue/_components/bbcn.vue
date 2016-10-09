@@ -67,6 +67,7 @@
     top: 2rem
     left: 2rem
     overflow-x: hidden
+    cursor: pointer
     
     *
       @extend %box-shadow
