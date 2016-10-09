@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+public/js
+npm-debug.log
+deploy-credentials.json

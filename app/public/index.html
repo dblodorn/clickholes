@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <base href="/">
+    <link rel="apple-touch-icon" href="imgs/ico/apple-touch.icon.png">
+    <link rel="icon" href="imgs/ico/favicon.png">
+    <link rel="shortcut icon" href="imgs/ico/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #load-window {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        opacity: 1;
+      }
+      button#run-app {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="load-window">
+      <button id="run-app">RUN APP</button>
+    </div>
+    <router-view></router-view>
+    <script src="js/vendor.bundle.js"></script>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

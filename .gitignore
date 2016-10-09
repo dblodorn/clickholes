@@ -1,0 +1,4 @@
+.DS_Store
+assets
+app/node-modules
+app/deploy-credentials.json

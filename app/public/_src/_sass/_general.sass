@@ -1,0 +1,34 @@
+//-------------------------------------------------------------------
+//  TOP LEVEL SELECTOR STYLING
+//-------------------------------------------------------------------
+
+html
+  font-size: 62.5%
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeSpeed
+  height: 100%
+
+body
+  font-size: $base-font-size
+  overflow-x: hidden
+  width: 100%
+  min-height: 100%
+  margin: 0
+  *
+    @extend %border-box
+
+img
+  width: 100%
+  height: auto
+  margin-bottom: -3px
+
+//
+.invisible
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
