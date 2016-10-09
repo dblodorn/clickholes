@@ -1,8 +1,8 @@
 {
-  "name": "vue-proto",
-  "description": "A Vue.js project",
+  "name": "CLICKHOLES",
+  "description": "An alternative style home-page",
   "author": "Dain Blodorn <dain@db13.us>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "webpack-dev-server --content-base public/ --inline --hot",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.js",
