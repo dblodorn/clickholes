@@ -2,7 +2,7 @@
   #collapsing
     - var rectangles = 10
     while rectangles--
-      .rectangle-container
+      .rectangle-container(v-link="'/strobe'")
         - var n = 20
           while n--
             i
