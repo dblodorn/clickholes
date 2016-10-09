@@ -5,9 +5,13 @@
 
 <script>
 
+  import $ from 'jquery'
+
   export default {
     ready: function(){
-      console.log('strobe')
+      setTimeout(() => { 
+        $('main').animate({'opacity': 1 , 'left': 0}, 1000)
+      }, 1000);
     }
   }
 
