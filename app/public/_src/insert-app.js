@@ -13,6 +13,7 @@ import Collapsing from './_vue/Collapsing.vue'
 import Strobe from './_vue/Strobe.vue'
 import Bounce from './_vue/Bounce.vue'
 import Breaker from './_vue/Breaker.vue'
+import Story from './_vue/Story.vue'
 
 // GLOBAL COMPONENTS
 import bbcn from './_vue/_components/bbcn.vue'
@@ -51,6 +52,9 @@ router.map({
       },
       '/breaker': {
         component: Breaker
+      },
+      '/story': {
+        component: Story
       }
     }
   }
@@ -61,7 +65,7 @@ const insertApp = {}
 
 insertApp.init = () => {
   
-  let timeout = 1500
+  let timeout = 100
 
   series([
     function(done) {
@@ -89,4 +93,4 @@ insertApp.init = () => {
 }
 
 // START BUTTON
-$('#run-app').click(insertApp.init)
+insertApp.init();

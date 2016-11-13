@@ -64,8 +64,8 @@
     height: $base-size
     width: $base-size
     position: absolute
-    top: 2rem
-    left: 2rem
+    top: 0
+    left: 0
     overflow-x: hidden
     cursor: pointer
     

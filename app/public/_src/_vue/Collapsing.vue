@@ -1,17 +1,52 @@
 <template lang="jade">
   #collapsing
-    - var rectangles = 10
-    while rectangles--
-      .rectangle-container(v-link="'/strobe'")
-        - var n = 20
-          while n--
-            i
+    .rectangle-container(v-link="'/strobe'")
+      - var n = 20
+        while n--
+          i
+    .rectangle-container(v-link="'/story'")
+      - var n = 20
+        while n--
+          i
+    .rectangle-container(v-link="'/bounce'")
+      - var n = 20
+        while n--
+          i
+    .rectangle-container(v-link="'/breaker'")
+      - var n = 20
+        while n--
+          i
+    .rectangle-container(v-link="'/strobe'")
+      - var n = 20
+        while n--
+          i
+    .rectangle-container(v-link="'/strobe'")
+      - var n = 20
+        while n--
+          i
+    .rectangle-container(v-link="'/story'")
+      - var n = 20
+        while n--
+          i
+    .rectangle-container(v-link="'/bounce'")
+      - var n = 20
+        while n--
+          i
+    .rectangle-container(v-link="'/breaker'")
+      - var n = 20
+        while n--
+          i
+    .rectangle-container(v-link="'/strobe'")
+      - var n = 20
+        while n--
+          i
 </template>
 
 <script>
 
   import $ from 'jquery'
   import series from 'async-series'
+  import T from 'timbre'
 
   export default {
     ready: function(){
@@ -25,7 +60,26 @@
           done()
         },
         function(done) {
-          console.log('next func')
+          setTimeout(() => { 
+
+            var duration = "10sec"
+
+            var freqs = T(function(count) {
+              return [20,100][count % 8];
+            });
+            
+            var osc = T("sin", {freq:280,mul:0.25});
+            var env = T("perc", {a:5, r:20}, osc).bang();
+            var interval = T("param", {value:500}).linTo(25, duration);
+            var chorous = T("chorus", {delay:5, rate:interval, depth:100, fb:0.25, mix:0.5}, env).bang();
+
+            T("interval", {interval:interval}, env, freqs, chorous).start();
+            
+            T("timeout", {timeout:duration}).on("ended", function() {
+              this.stop();
+            }).set({buddies:env}).start();
+
+          }, timeout);
         }
       ], function(err) {
         console.log('FAIL!')
@@ -43,6 +97,9 @@
     height: 0
     width: 100vw
     overflow: hidden
+    //background-color: $white
+    z-index: 200
+    position: fixed
 
   // Rectangle Layout
   .rectangle-container

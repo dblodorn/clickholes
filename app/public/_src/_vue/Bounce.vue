@@ -1,5 +1,5 @@
 <template lang="jade">
-  #mask(v-link="'/breaker'")
+  #mask(v-link="'/'")
     .item
   #bg
 </template>
@@ -11,8 +11,9 @@
 
   export default {
     ready: function(){
+      let timeout = 1000
       setTimeout(() => { 
-        $('main').animate({'opacity': 1 , 'left': 0}, 1000)
+        $('main').animate({'opacity': 1 , 'left': 0}, timeout)
         anime({
           targets: '.item',
           translateX: '200vw',
@@ -23,7 +24,7 @@
           direction: 'alternate',
           loop: true
         });
-      }, 1000);
+      }, timeout);
     }
   }
 
@@ -55,6 +56,7 @@
     top: 0
     left: 0
     background: tan
+    cursor: pointer
     
   .item
     position: absolute

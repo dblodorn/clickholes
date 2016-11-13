@@ -9,6 +9,7 @@ import series from 'async-series'
 import states from './_app/states.js'
 import utility from './_app/utilities.js'
 import browser from './_app/browser-detect.js'
+import cubes from './_app/cubes.js'
 
 // RUN FUNCTIONS
 import insertApp from './insert-app.js'

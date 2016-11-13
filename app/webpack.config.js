@@ -8,7 +8,7 @@ const PATHS = {
 module.exports = {
   entry: {
     app: ['./public/_src/index.js'],
-    vendor: ["jquery"]
+    vendor: ['jquery','vue','vue-router','vue-resource','vue-touch','async-series']
   },
   output: {
     path: path.resolve(__dirname, './js'),
@@ -55,12 +55,13 @@ module.exports = {
       }
     ]
   },
+  externals: {
+    "timbre" : "T",
+    "three": "THREE"
+  },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
   ],
-  externals: {
-    "pixi": "PIXI"
-  },
   devServer: {
     historyApiFallback: true,
     noInfo: true
