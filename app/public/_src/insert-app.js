@@ -14,6 +14,7 @@ import Strobe from './_vue/Strobe.vue'
 import Bounce from './_vue/Bounce.vue'
 import Breaker from './_vue/Breaker.vue'
 import Story from './_vue/Story.vue'
+import Story2 from './_vue/Story-two.vue'
 
 // GLOBAL COMPONENTS
 import bbcn from './_vue/_components/bbcn.vue'
@@ -55,6 +56,9 @@ router.map({
       },
       '/story': {
         component: Story
+      },
+      '/story2': {
+        component: Story2
       }
     }
   }

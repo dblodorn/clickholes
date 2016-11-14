@@ -13,20 +13,22 @@
         $('main').animate({'opacity': 1 , 'left': 0}, 1000)
         $('.letter-breaker').each(function() {
           var char = $(this);
-          char.html(char.text().replace(/([L Ddow])/g, "<span>$&</span>"));
+          char.html(char.text().replace(/([L Ddow])/g, "<i>$&</i>"));
         });
-      }, 1000);
+      }, 100);
     }
   }
 
 </script>
 
-<style lang="sass?indentedSyntax" scoped>
+<style lang="sass?indentedSyntax">
   
   @import "../_sass/utilities/_utilities.sass"
 
   article
     padding: 14rem 4rem 4rem
+    z-index: 1000
+    position: relative
 
   h1.letter-breaker
     font-family: arial
@@ -38,24 +40,24 @@
     color: grey
     text-align: left
     
-    span
-      color: purple!important
+  i
+    color: purple!important
 
-    span:nth-child(1n)
-      color: red!important
-      background-color: yellow
+  i:nth-child(1n)
+    color: red!important
+    background-color: yellow
 
-    span:nth-child(2n)
-      color: blue!important
+  i:nth-child(2n)
+    color: blue!important
 
-    span:nth-child(3n)
-      color: yellow!important
+  i:nth-child(3n)
+    color: yellow!important
 
-    span:nth-child(4n)
-      color: grey!important
-      background-color: lime
+  i:nth-child(4n)
+    color: grey!important
+    background-color: lime
 
-    span:nth-child(5n)
-      color: purple!important
+  i:nth-child(5n)
+    color: purple!important
 
 </style>

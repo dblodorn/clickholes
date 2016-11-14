@@ -2,10 +2,24 @@
   bbcn-component
   main
     router-view
+  nav#main-nav
+    ul
+      li(v-for="page in pages")
+        a(v-link="page.link") {{page.page_name}}
 </template>
 
 <script>
   export default {
+    data () {
+      return {
+        pages: [
+          {
+            page_name: "open field",
+            link: "story"
+          }
+        ]
+      }
+    },
     ready: function(){
       console.log('shell mounted')
     }
